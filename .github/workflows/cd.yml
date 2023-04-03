@@ -11,10 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       # get azure credentials from secrets
-      - name: Azure Login
-        uses: azure/login@v1
+      - uses: Azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+
       - name: Terraform Init
         run: |
           make init
@@ -22,6 +22,7 @@ jobs:
       - name: Terraform Plan
         run: |
           make plan
+          
       # - name: Terraform Apply
       #   uses: hashicorp/terraform-github-actions@master
       #   with:
