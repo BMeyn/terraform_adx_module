@@ -9,7 +9,8 @@
 			"extensions": [
 				"GitHub.copilot",
 				"hashicorp.terraform",
-				"GitHub.vscode-github-actions"
+				"GitHub.vscode-github-actions",
+				"golang.go"
 			]
 		}
 	}
