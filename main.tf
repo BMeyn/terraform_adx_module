@@ -1,5 +1,11 @@
 # create basic main.tf file to deploy infrastructure to azure
 terraform {
+  backend "azurerm" {
+    resource_group_name  = "terraform-testing"
+    storage_account_name = "terraformtestingstates"
+    container_name       = "tfstate"
+    key                  = "terraform-adx-module.tfstate"
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
