@@ -1,5 +1,5 @@
 # create github action to init and plan terrafrom
-name: Terraform CD
+name: Terraform Test
 on:
   push:
     branches:
