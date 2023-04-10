@@ -1,7 +1,6 @@
 # create github action to init and plan terrafrom
 name: Terraform Test
 on:  
-  push:
   pull_request:
     branches:
       - master
