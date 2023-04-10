@@ -1,9 +1,7 @@
 # create github action to init and plan terrafrom
 name: Terraform Test
 on:
-  push:
-    branches:
-      - master
+  pull_request:
 jobs:
   terraform:
     runs-on: ubuntu-latest

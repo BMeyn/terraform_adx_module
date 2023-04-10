@@ -1,9 +1,10 @@
 # create github action to init and plan terrafrom
 name: Terraform Plan
+# only run on push to pull request
 on:
   push:
     branches:
-      - master
+      - feature/
 jobs:
   terraform:
     runs-on: ubuntu-latest
